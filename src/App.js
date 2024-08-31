@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import BookRoom from './components/BookRoom';
+import RoomDetails from './components/RoomDetails';
+import Search from './components/Search';
+import TimeSlots from './components/TimeSlot';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='mb-6'>
+        <Search />
+      </div>
+      <div className='flex gap-4'>
+        <RoomDetails />
+        <div className='border border-2 border-black'>
+          <BookRoom/>
+          <TimeSlots />
+        </div>
+      </div>
     </div>
   );
 }
